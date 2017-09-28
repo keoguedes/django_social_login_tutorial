@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'social_core',
     'account',
     'bootstrap3',
-    'django.contrib.admin',  # 要在account後面，有順序性
+    'django.contrib.admin',
 ]
 
 MIDDLEWARE = [
@@ -107,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
 TIME_ZONE = 'UTC'
 
@@ -131,7 +131,7 @@ LOGIN_REDIRECT_URL = reverse_lazy('dashboard')
 LOGIN_URL = reverse_lazy('login')
 LOGOUT_URL = reverse_lazy('logout')
 
-# 設定 Django 在 console 中輸出 e-mail 內容來代替通過 SMTP 服務發送郵件
+
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
@@ -181,5 +181,5 @@ SOCIAL_AUTH_TWITTER_PROFILE_EXTRA_PARAMS = {
     'fields': 'id, name, email'
 }
 
-# Heroku 佈署
+
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

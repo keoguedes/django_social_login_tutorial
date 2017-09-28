@@ -17,16 +17,23 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="{% url "dashboard" %}">Django Social Login Tutorial</a>
+            <a class="navbar-brand" href="{% url "dashboard" %}">LifeBox</a>
+           
+            
         </div>
+        <div class="navbar-header">
+                <div class="navbar-brand navbar-right">menu bar</div>
+        </div>
+
+
         <ul class="nav navbar-nav navbar-right">
 
             {% if request.user.is_authenticated %}
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Hello {{ request.user.first_name }}</a>
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Bem vindo {{ request.user.first_name }}</a>
                 </li>
-                <li><a href="{% url "logout" %}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                <li><a href="{% url "logout" %}"><span class="glyphicon glyphicon-log-out"></span> Sair</a></li>
             {% else %}
-                <li><a href="{% url "login" %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="{% url "login" %}"><span class="glyphicon glyphicon-log-in"></span> Entrar</a></li>
             {% endif %}
         </ul>
     </div>

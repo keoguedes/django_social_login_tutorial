@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 {% load account_tags %}
-{% block title %}Dashboard{% endblock %}
+{% block title %}Painel de Controle{% endblock %}
 {% block content %}
     <div class="jumbotron">
-        <h1>Dashboard</h1>
-        <p>Welcome to your dashboard.</p>
-        So far <b>{% total_people %}</b> people have tried Django Social Login Tutorial.
+        <h1>Painel de controle</h1>
+        <p>Bem vindo ao seu painel de controle.</p>
+        Até agora <b> {% total_people%} </b> pessoas tentaram acessar o painel.
     </div>
 
 
-    {% social_people %}
+    <!-- {% social_people %} -->
 
 
 
